@@ -9,6 +9,7 @@ WriteMakefile(
     AUTHOR         => 'Monitoring Plugin Development Team <team@monitoring-plugins.org>',
     PREREQ_PM         => {
         Monitoring::Plugin => 0,
+        base               => 0,
         Test::More         => 0.62,
     },
 );

@@ -23,7 +23,7 @@ $p = Nagios::Plugin->new( usage => "dummy usage statement" );
 
 # option accessors work
 can_ok $p, 'opts';
-isa_ok $p->opts, 'Nagios::Plugin::Getopt', "Getopt object is defined";
+isa_ok $p->opts, 'Monitoring::Plugin::Getopt', "Getopt object is defined";
 
 $p->add_arg('warning|w=s', "warning");
 $p->add_arg('critical|c=s', "critical");
