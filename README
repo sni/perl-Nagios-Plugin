@@ -1,0 +1,22 @@
+Nagios::Plugin
+==============
+
+These modules are meant for perl developers of plugins for Nagios
+(https://www.monitoring-plugins.org/). It is meant to simplify a lot
+of the common functions required to do checking of a particular
+service.
+
+DEPRECATED
+
+This module is *deprecated* in favour of Monitoring::Plugin.
+Read more about why this project had to change its name:
+https://www.monitoring-plugins.org/news/new-project-name.html
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006-2014 by Monitoring Plugin Development Team
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.4 or,
+at your option, any later version of Perl 5 you may have available.
+
