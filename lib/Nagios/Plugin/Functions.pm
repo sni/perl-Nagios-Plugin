@@ -7,6 +7,12 @@ use base 'Monitoring::Plugin::Functions';
 # Remember to update Nagios::Plugins as well
 our $VERSION = "0.37";
 
+BEGIN {
+    warnings::warnif("deprecated", "Nagios::Plugin is deprecated, use Monitoring::Plugin instead.")
+        unless $Monitoring::Plugin::deprecated_warned;
+    $Monitoring::Plugin::deprecated_warned = 1;
+};
+
 our @STATUS_CODES = qw(OK WARNING CRITICAL UNKNOWN DEPENDENT);
 
 #require Exporter;

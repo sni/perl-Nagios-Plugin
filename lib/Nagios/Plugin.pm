@@ -15,6 +15,13 @@ our @EXPORT_OK = qw(%ERRORS %STATUS_TEXT);
 # Make sure you update $Nagios::Plugin::Functions::VERSION too
 our $VERSION = "0.37";
 
+BEGIN {
+    our $deprecated_warned = 0;
+    warnings::warnif("deprecated", "Nagios::Plugin is deprecated, use Monitoring::Plugin instead.")
+        unless $Monitoring::Plugin::deprecated_warned;
+    $deprecated_warned = 1;
+};
+
 # MP::Functions wrappers
 sub nagios_exit {
     my $self = shift;
